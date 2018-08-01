@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CarouselModule } from 'ngx-bootstrap';
 import { RouterModule } from '@angular/router';
-
+import { BsDropdownModule } from 'ngx-bootstrap';
 
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
@@ -25,6 +25,7 @@ import {StorageService} from './storage.service';
   imports: [
     BrowserModule,
     CarouselModule.forRoot(),
+    BsDropdownModule.forRoot(),
     RouterModule.forRoot([
       { path: '', component: HomePageComponent, pathMatch: 'full' },
       { path: 'Squad', component: SquadComponent },
