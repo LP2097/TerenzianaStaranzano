@@ -12,4 +12,5 @@ export class SquadComponent implements OnInit {
   ngOnInit() {
   }
 
+
 }

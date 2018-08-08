@@ -1,53 +1,92 @@
-<nav class="navbar navbar-expand-lg navbar-light  " style="background-color:#C21212">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <div class="navbar-toggler btn-group " type="button" dropdown data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 
-      <button id="gino-basic" dropdownToggle type="button"  class="btn btn-primary dropdown-toggle"
-              aria-controls="dropdown-basic">
-        gino <span class="caret"></span>
-      </button>
-      <ul id="lino-basic" *dropdownMenu class="dropdown-menu"
-          role="menu" aria-labelledby="button-basic">
-        <li role="menuitem"><a class="dropdown-item" href="#">Action</a></li>
-        <li role="menuitem"><a class="dropdown-item" href="#">Another action</a></li>
-        <li role="menuitem"><a class="dropdown-item" href="#">Something else here</a></li>
-        <li class="divider dropdown-divider"></li>
-        <li role="menuitem"><a class="dropdown-item" href="#">Separated link</a>
-        </li>
-      </ul>
-
+<!--NAV BAR DA COPIARE SU TUTTE LE PAGINE -->
+<nav class="navbar navbar-expand-lg  mynav">
+  <div >
+  <a class="navbar-brand " href=""><img src="assets/images/logo staranzano.png" width="60px" height="60px"></a>
   </div>
-  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
+
+    <div class="navbar-toggler btn-group " type="button" dropdown data-toggle="collapse" data-target="#navbarNavDropdown; #social" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <button  dropdownToggle type="button"  class="btn  " style="background: none; border: none; border-radius: 0px; float: right" >
+        <i class="fa fa-list-ul fa-2x social"></i>
+      </button>
+      <ul  *dropdownMenu class="dropdown-menu"
+          role="menu" aria-labelledby="button-basic">
+        <li role="menuitem"><a class="dropdown-item" href="#">Home</a></li>
+        <li class="divider dropdown-divider"></li>
+        <li role="menuitem"><a class="dropdown-item" href="#">Le Squadre</a></li>
+        <li class="divider dropdown-divider"></li>
+        <li role="menuitem"><a class="dropdown-item" href="#">Staff</a></li>
+        <li class="divider dropdown-divider"></li>
+        <li role="menuitem"><a class="dropdown-item" href="#">Contattaci</a>
+        <li class="divider dropdown-divider"></li>
+        <li role="menuitem">
+           <a  href="https://www.facebook.com/asdterenzianastaranzano/">
+            <i class=" fa fa-facebook-square fa-2x  col-1 socialnav"></i></a>
+          <a  href="https://www.youtube.com/watch?v=z2OiHFTyqvg">
+            <i class=" fa fa-youtube fa-2x col-1 offset-1 socialnav"></i></a>
+          <a href="https://www.facebook.com/asdterenzianastaranzano/">
+            <i class=" fa fa-instagram fa-2x  col-1 offset-1 socialnav"></i></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="Squad">Le Squadre</a>
+      </ul>
+  </div>
+
+  <div class="collapse navbar-collapse col-lg-8 " id="navbarNavDropdown">
+    <ul class="navbar-nav navbar-left" style="float: left">
+      <li class="nav-item active col-lg-3">
+        <a class="nav-link font" href="">HOME </a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="Staff">Staff</a>
+      <li class="nav-item col-lg-3">
+        <a class="nav-link font" href="Squad">STORIA</a>
       </li>
-      <li class="nav-item ">
+      <li class="nav-item col-lg-3">
+        <a class="nav-link font" href="Staff">STAFF</a>
+      </li>
+      <li class="nav-item col-lg-2 ">
         <div class="btn-group" dropdown>
-          <button id="button-basic" dropdownToggle type="button"  class="btn btn-primary dropdown-toggle"
-                  aria-controls="dropdown-basic">
-            Button dropdown <span class="caret"></span>
+          <button id="button-basic" dropdownToggle type="button"  class="btn  dropdown-toggle font squadre"
+                  aria-controls="dropdown-basic" style="background: none; border: none; border-radius: 0px">
+            SQUADRE <span class="caret"></span>
           </button>
+
           <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu"
               role="menu" aria-labelledby="button-basic">
-            <li role="menuitem"><a class="dropdown-item" href="#">Action</a></li>
-            <li role="menuitem"><a class="dropdown-item" href="#">Another action</a></li>
-            <li role="menuitem"><a class="dropdown-item" href="#">Something else here</a></li>
+            <li role="menuitem"><a class="dropdown-item" href="#">1° Sqaudra</a></li>
             <li class="divider dropdown-divider"></li>
-            <li role="menuitem"><a class="dropdown-item" href="#">Separated link</a>
+            <li role="menuitem"><a class="dropdown-item" href="#">Juniores</a></li>
+            <li class="divider dropdown-divider"></li>
+            <li role="menuitem"><a class="dropdown-item" href="#">Giovanissimi</a></li>
+            <li class="divider dropdown-divider"></li>
+            <li role="menuitem"><a class="dropdown-item" href="#">Pulcini</a>
+            <li class="divider dropdown-divider"></li>
+            <li role="menuitem"><a class="dropdown-item" href="#">Primi Calci</a>
             </li>
           </ul>
         </div>
       </li>
     </ul>
+
+
+  </div >
+  <div id="social" class="collapse navbar-collapse offset-1 col-lg-2">
+    <ul class="nav navbar-right " style="float: right">
+      <div class="offset-1">
+        <li><a href="https://www.facebook.com/asdterenzianastaranzano/"> <i class=" fa fa-facebook-square fa-2x social"></i></a></li>
+      </div>
+      <div class="offset-1">
+        <li><a href="https://www.youtube.com/watch?v=z2OiHFTyqvg"> <i class="fa fa-youtube fa-2x social"></i> </a></li>
+      </div>
+      <div class="col-lg-1">
+        <li><a href="#"><i class="  fa fa-instagram fa-2x social"></i> </a></li>
+      </div>
+
+    </ul>
   </div>
 </nav>
+
+
+
+
+<!-- SLIDE IMMAGINI PRINCIPALE -->
 <div>
   <carousel  class="my-carousel" >
 
@@ -74,5 +113,123 @@
     </slide>
 
   </carousel>
+
+</div>
+
+<div class="container">
+  <img src="assets/images/matching.jpg" alt="Snow" style="width:100%;">
+
+  <div class="centered" >
+    <div data-aos="fade-right" data-aos-duration="1000">
+    <img src="assets/images/logo staranzano.png" width="15%" height="15%"></div></div>
+  <div class="centered4"> <div data-aos="zoom-in" data-aos-duration="1000">3</div></div>
+  <div class="centered3"><div data-aos="zoom-in" data-aos-duration="1000">3</div></div>
+  <div class="centered1">
+    <div data-aos="fade-left" data-aos-duration="1000">
+      <img src="assets/images/seconda squadra.png" width="70%" height="70%"></div></div>
+</div>
+
+<!--TIMELINE -->
+<div data-aos="fade-left" data-aos-duration="1000">
+<ul class="timeline">
+  <li>
+    <div class="timeline-badge"><i class="fa fa-futbol-o "></i></div>
+    <div class="timeline-panel">
+      <div class="timeline-heading">
+        <h4 class="timeline-title">Terenziana Vince</h4>
+        <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 11 hours ago via Twitter</small></p>
+      </div>
+      <div class="timeline-body">
+        <p>Vince la Terenziana 4-0 contro UFM </p>
+      </div>
+    </div>
+  </li>
+  <li class="timeline-inverted">
+    <div class="timeline-badge warning"><i class="fa fa-whistle-o"></i></div>
+    <div class="timeline-panel">
+      <div class="timeline-heading">
+        <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+      </div>
+      <div class="timeline-body">
+        <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.
+          Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+        <p>Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Interagi no mé, cursus quis, vehicula ac nisi. Aenean vel dui dui. Nullam leo erat, aliquet quis tempus a, posuere ut mi. Ut scelerisque neque et turpis posuere
+          pulvinar pellentesque nibh ullamcorper. Pharetra in mattis molestie, volutpat elementum justo. Aenean ut ante turpis. Pellentesque laoreet mé vel lectus scelerisque interdum cursus velit auctor. Lorem ipsum dolor sit amet, consectetur adipiscing
+          elit. Etiam ac mauris lectus, non scelerisque augue. Aenean justo massa.</p>
+      </div>
+    </div>
+  </li>
+  <li>
+    <div class="timeline-badge danger"><i class="glyphicon glyphicon-credit-card"></i></div>
+    <div class="timeline-panel">
+      <div class="timeline-heading">
+        <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+      </div>
+      <div class="timeline-body">
+        <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.
+          Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+      </div>
+    </div>
+  </li>
+  <li class="timeline-inverted">
+    <div class="timeline-panel">
+      <div class="timeline-heading">
+        <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+      </div>
+      <div class="timeline-body">
+        <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.
+          Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+      </div>
+    </div>
+  </li>
+  <li>
+    <div class="timeline-badge info"><i class="glyphicon glyphicon-floppy-disk"></i></div>
+    <div class="timeline-panel">
+      <div class="timeline-heading">
+        <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+      </div>
+      <div class="timeline-body">
+        <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.
+          Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+        <hr>
+        <div class="btn-group">
+          <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-cog"></i> <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </li>
+  <li>
+    <div class="timeline-panel">
+      <div class="timeline-heading">
+        <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+      </div>
+      <div class="timeline-body">
+        <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.
+          Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+      </div>
+    </div>
+  </li>
+  <li class="timeline-inverted">
+    <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
+    <div class="timeline-panel">
+      <div class="timeline-heading">
+        <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+      </div>
+      <div class="timeline-body">
+        <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.
+          Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+      </div>
+    </div>
+  </li>
+</ul>
 </div>
 

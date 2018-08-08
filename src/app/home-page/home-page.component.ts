@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
+import {AosToken} from '../aos';
 
 @Component({
   selector: 'app-home-page',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePageComponent implements OnInit {
 
-  constructor() { }
+  constructor(@Inject(AosToken) aos) {  aos.init({ once: false}); }
+
+  shouldStick;
 
   ngOnInit() {
+  }
+
+  bingScrollEvent() {
+    window.addEventListener("scroll", (e) => {
+      if (window.pageYOffset > 100) {
+        this.shouldStick = true;
+      } else {
+        this.shouldStick = false;
+      }
+    });
   }
 
 }

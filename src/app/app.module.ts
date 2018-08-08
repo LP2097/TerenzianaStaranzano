@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { CarouselModule } from 'ngx-bootstrap';
 import { RouterModule } from '@angular/router';
 import { BsDropdownModule } from 'ngx-bootstrap';
+import { AosToken, aos } from './aos';
+
 
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
@@ -35,7 +37,7 @@ import {StorageService} from './storage.service';
 
     ]/*, { useHash : true}*/)
   ],
-  providers: [StorageService],
+  providers: [StorageService, { provide: AosToken, useValue: aos }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
