@@ -8,7 +8,11 @@ import {AosToken} from '../aos';
 })
 export class HomePageComponent implements OnInit {
 
-  constructor(@Inject(AosToken) aos) {  aos.init({ once: false}); }
+  constructor(@Inject(AosToken) aos) {  aos.init();
+    window.addEventListener('load', function() {
+      aos.refresh();
+
+    });}
 
   shouldStick;
 
