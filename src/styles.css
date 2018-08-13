@@ -315,3 +315,9 @@
   text-align: center;
 
 }
+
+.riga{
+  background-color: #d9534f;
+  height: 40px;
+  width: 100%;
+}
