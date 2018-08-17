@@ -1,5 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 
+
+
+
 .squadre{
   margin-top: 1%;
 }
@@ -321,3 +324,51 @@
   height: 40px;
   width: 100%;
 }
+
+.titolo1{
+  font: bold 70px "Century Schoolbook", sans-serif, Times, serif;
+  color: white;
+  line-height: 90%;
+  margin: .2em 0 .4em 0;
+  letter-spacing: 2px;xe: 40px;
+  text-shadow: 2px 0 0 black, -2px 0 0 black, 0 2px 0 black, 0 -2px 0 black, 1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
+}
+
+.titolo2{
+  font: bold 70px "Century Schoolbook", sans-serif, Times, serif;
+  color: #d9534f;
+  line-height: 90%;
+  margin: .2em 0 .4em 0;
+  letter-spacing: 2px;xe: 40px;
+}
+
+.centered10{
+  color: white;
+  font-family: Bookman;
+  font-size: 120px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.centered11{
+  color: white;
+  font-family: Bookman;
+  font-size: 120px;
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+}
+.centered12{
+  color: white;
+  font-family: Bookman;
+  font-size: 120px;
+  position: absolute;
+  top: 50%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+}
+
