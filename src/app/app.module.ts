@@ -4,7 +4,8 @@ import { CarouselModule } from 'ngx-bootstrap';
 import { RouterModule } from '@angular/router';
 import { BsDropdownModule } from 'ngx-bootstrap';
 import { AosToken, aos } from './aos';
-
+import 'hammerjs';
+import { NgxGalleryModule } from 'ngx-gallery';
 
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
@@ -26,6 +27,7 @@ import {StorageService} from './storage.service';
   ],
   imports: [
     BrowserModule,
+    NgxGalleryModule,
     CarouselModule.forRoot(),
     BsDropdownModule.forRoot(),
     RouterModule.forRoot([
