@@ -36,180 +36,6 @@
 }
 
 
-.timeline{
-  position: relative;
-
-}
-
-
-.timeline {
-  list-style: none;
-  padding: 20px 0 20px;
-  position: relative;
-}
-
-.timeline:before {
-  top: 0;
-  bottom: 0;
-  position: absolute;
-  content: " ";
-  width: 3px;
-  background-color: #eeeeee;
-  left: 50%;
-  margin-left: -1.5px;
-}
-
-.timeline > li {
-  margin-bottom: 20px;
-  position: relative;
-}
-
-.timeline > li:before,
-.timeline > li:after {
-  content: " ";
-  display: table;
-}
-
-.timeline > li:after {
-  clear: both;
-}
-
-.timeline > li:before,
-.timeline > li:after {
-  content: " ";
-  display: table;
-}
-
-.timeline > li:after {
-  clear: both;
-}
-
-.timeline > li > .timeline-panel {
-  width: 46%;
-  float: left;
-  border: 1px solid #d4d4d4;
-  border-radius: 2px;
-  padding: 20px;
-  position: relative;
-  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
-}
-
-.timeline > li > .timeline-panel:before {
-  position: absolute;
-  top: 26px;
-  right: -15px;
-  display: inline-block;
-  border-top: 15px solid transparent;
-  border-left: 15px solid #ccc;
-  border-right: 0 solid #ccc;
-  border-bottom: 15px solid transparent;
-  content: " ";
-}
-
-.timeline > li > .timeline-panel:after {
-  position: absolute;
-  top: 27px;
-  right: -14px;
-  display: inline-block;
-  border-top: 14px solid transparent;
-  border-left: 14px solid #fff;
-  border-right: 0 solid #fff;
-  border-bottom: 14px solid transparent;
-  content: " ";
-}
-
-.timeline > li > .timeline-badge {
-  color: #fff;
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
-  font-size: 1.4em;
-  text-align: center;
-  position: absolute;
-  top: 16px;
-  left: 50%;
-  margin-left: -25px;
-  background-color: #999999;
-  z-index: 100;
-  border-top-right-radius: 50%;
-  border-top-left-radius: 50%;
-  border-bottom-right-radius: 50%;
-  border-bottom-left-radius: 50%;
-}
-
-.timeline > li.timeline-inverted > .timeline-panel {
-  float: right;
-}
-
-.timeline > li.timeline-inverted > .timeline-panel:before {
-  border-left-width: 0;
-  border-right-width: 15px;
-  left: -15px;
-  right: auto;
-}
-
-.timeline > li.timeline-inverted > .timeline-panel:after {
-  border-left-width: 0;
-  border-right-width: 14px;
-  left: -14px;
-  right: auto;
-}
-
-.timeline-badge.primary {
-  background-color: #2e6da4 !important;
-}
-
-.timeline-badge.success {
-  background-color: #3f903f !important;
-}
-
-.timeline-badge.warning {
-  background-color: #f0ad4e !important;
-}
-
-.timeline-badge.danger {
-  background-color: #d9534f !important;
-}
-
-.timeline-badge.info {
-  background-color: #5bc0de !important;
-}
-
-.timeline-title {
-  margin-top: 0;
-  color: inherit;
-}
-
-.timeline-body > p,
-.timeline-body > ul {
-  margin-bottom: 0;
-}
-
-.timeline-body > p + p {
-  margin-top: 5px;
-}
-
-.title-line-one{
-  float: left;
-  width: 20%;
-  height: 10px;
-  color: white;
-  background-color: white;
-
-
-}
-
-.title-line-two{
-  float:left;
-  clear: left;
-  width: 30%;
-  height: 10px;
-  color: red;
-  background-color: red;
-}
-
-
 .container {
   position: relative;
   text-align: center;
@@ -217,8 +43,9 @@
   width: 100%;
 
 }
-.centered5 {
-
+.titleOnImage {
+  font-size: 3vw;
+  font-family: 'American Typewriter';
   position: absolute;
   top: 10%;
   left: 50%;
@@ -227,7 +54,7 @@
 
 
 /* Centered text */
-.centered {
+.risultatoLogoD {
 
   position: absolute;
   top: 50%;
@@ -235,7 +62,7 @@
   transform: translate(-50%, -50%);
 }
 
-.centered1 {
+.risultatoLogoS {
 
   position: absolute;
   top: 50%;
@@ -243,9 +70,9 @@
   transform: translate(-50%, -50%);
 }
 
-.centered3 {
+.risultatoS {
   color: white;
-  font-size: 120px;
+  font-size: 9vw;
   font-family: Bookman;
   position: absolute;
   top: 50%;
@@ -253,15 +80,25 @@
   transform: translate(-50%, -50%);
 }
 
-.centered4 {
+.risultatoD {
   color: white;
   font-family: Bookman;
-  font-size: 120px;
+  font-size: 9vw;
   position: absolute;
   top: 50%;
   left: 40%;
   transform: translate(-50%, -50%);
 }
+
+.risultatoBarra {
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 10vw;
+  transform: translate(-50%, -50%);
+}
+
 
 .wrapper{
   display: flex;
@@ -289,14 +126,6 @@
   transform: translate(-50%, -50%);
 }
 
-.centered7 {
-
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  font-size: 150px;
-  transform: translate(-50%, -50%);
-}
 
 .centered8 {
   position: absolute;
@@ -342,10 +171,9 @@
   letter-spacing: 2px;xe: 40px;
 }
 
-.centered10{
+.newsC{
   color: white;
   font-family: Bookman;
-  font-size: 120px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -353,22 +181,107 @@
 }
 
 
-.centered11{
+.newsS{
   color: white;
   font-family: Bookman;
-  font-size: 120px;
   position: absolute;
   top: 50%;
   left: 20%;
   transform: translate(-50%, -50%);
 }
-.centered12{
+.newsD{
   color: white;
   font-family: Bookman;
-  font-size: 120px;
   position: absolute;
   top: 50%;
   left: 80%;
   transform: translate(-50%, -50%);
 }
+
+.thumbnail{
+  background: rgba(64,64,64,0.8);
+  height: 40vw;
+}
+
+.title{
+  font-size: 10vw;
+  font-family: 'American Typewriter';
+  margin-top: 20%
+}
+
+.newsParagraph{
+  font-size: 1.5vw;
+  padding: 5%
+}
+
+.newsTitle{
+  font-size: 2vw;
+}
+
+
+@media screen and (max-width: 1000px) {
+  #title_message {
+    visibility: hidden;
+    clear: both;
+    float: left;
+    margin: 10px auto 5px 20px;
+    width: 28%;
+    display: block;
+  }
+
+
+
+}
+
+
+@media screen and (min-width: 999px) {
+  #title_message_phone {
+    visibility: visible;
+    display: block;
+    color: black;
+  }
+}
+
+
+@media all and (min-width: 1000px) {
+  .deskContent {
+    visibility: visible;
+    clear: both;
+    float: left;
+    margin: 10px auto 5px 20px;
+    width: 28%;
+    display: block;
+  }
+  .phoneContent {
+    visibility: hidden;
+    clear: both;
+    float: left;
+    margin: 10px auto 5px 20px;
+    width: 28%;
+    display: none;
+  }
+}
+
+@media all and (max-width: 999px) {
+  .deskContent {
+    visibility: hidden;
+    clear: both;
+    float: left;
+    margin: 10px auto 5px 20px;
+    width: 28%;
+    display: none;
+  }
+  .phoneContent {
+    visibility: visible;
+    color: black;
+    clear: both;
+    float: left;
+    margin: 10px auto 5px 20px;
+    width: 28%;
+    display: block;
+  }
+}
+
+
+
 

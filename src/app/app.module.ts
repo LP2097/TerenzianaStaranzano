@@ -14,6 +14,10 @@ import { HistoryComponent } from './history/history.component';
 import { StaffComponent } from './staff/staff.component';
 import { ContactComponent } from './contact/contact.component';
 import {StorageService} from './storage.service';
+import { AgmCoreModule } from '@agm/core';
+import {AngularFireModule} from 'angularfire2';
+import {AngularFireDatabaseModule} from 'angularfire2/database';
+import {environment} from '../environments/environment';
 
 
 @NgModule({
@@ -30,6 +34,11 @@ import {StorageService} from './storage.service';
     NgxGalleryModule,
     CarouselModule.forRoot(),
     BsDropdownModule.forRoot(),
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyByzKjemv3U7zciSsSKyEnapmI5fluKAUg'
+    }),
     RouterModule.forRoot([
       { path: '', component: HomePageComponent, pathMatch: 'full' },
       { path: 'Squad', component: SquadComponent },

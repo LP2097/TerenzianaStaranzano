@@ -1,4 +1,14 @@
-<p>
-  squad works!
-</p>
+ciao
+
+
+<div class="container">
+<p>Show all users</p>
+
+  <div *ngFor="let calc of calciatori | async">
+    {{calc.cognonome }}
+    {{ calc.nome}}
+
+  </div>
+
+</div>
 
