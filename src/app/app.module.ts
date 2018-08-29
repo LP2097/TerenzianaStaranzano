@@ -18,6 +18,10 @@ import { AgmCoreModule } from '@agm/core';
 import {AngularFireModule} from 'angularfire2';
 import {AngularFireDatabaseModule} from 'angularfire2/database';
 import {environment} from '../environments/environment';
+import {AngularFirestore} from 'angularfire2/firestore';
+import {AngularFireStorageModule} from 'angularfire2/storage';
+
+
 
 
 @NgModule({
@@ -34,6 +38,7 @@ import {environment} from '../environments/environment';
     NgxGalleryModule,
     CarouselModule.forRoot(),
     BsDropdownModule.forRoot(),
+    AngularFireStorageModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     AgmCoreModule.forRoot({

@@ -1,33 +1,39 @@
 import { Component, OnInit } from '@angular/core';
-import {AngularFireDatabase, AngularFireList} from 'angularfire2/database';
 import {Observable} from 'rxjs/Observable';
-
-class Book {
-  constructor(public title) { }
-}
+import {AngularFireDatabase} from 'angularfire2/database';
+import {AngularFireStorage} from 'angularfire2/storage';
+import * as _ from 'underscore';
 
 @Component({
   selector: 'app-squad',
   templateUrl: './squad.component.html',
   styleUrls: ['./squad.component.css']
 })
-export class SquadComponent implements OnInit {
-  calciatori:Observable<any[]>;
+export class SquadComponent  {
 
-  constructor(private db: AngularFireDatabase) {
-    this.calciatori=this.getSquad('/calciatore/0');
-    console.log(this.calciatori)
+  items;
+  ordinata;
+  profileUrl;
+  i;
+
+  constructor(public db: AngularFireDatabase, private storage: AngularFireStorage) {
+
+
+    db.list('PrimaSquadra/Calciatori').valueChanges().subscribe(items => {
+      this.items = items;
+      this.getList()
+      JSON.stringify(this.items);
+      console.log(this.items);
+
+    });
 
   }
 
-  getSquad(listPath): Observable<any[]>{
-    return this.db.list(listPath).valueChanges();
-  }
 
-  ngOnInit() {
-
-
-
+  getList(){
+    let list =_.groupBy(this.items,'ruolo' );
+    console.log("la lista ordinata"+list)
+    this.ordinata=list;
   }
 
 

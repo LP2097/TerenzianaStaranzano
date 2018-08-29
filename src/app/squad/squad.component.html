@@ -1,14 +1,22 @@
-ciao
+<div class="container col-8">
+  <table class="table" style="color: black; margin-top: 12%">
+    <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Ruolo</th>
+      <th></th>
 
 
-<div class="container">
-<p>Show all users</p>
+    </tr>
+    </thead>
+    <tbody *ngFor="let i of items">
+    <tr>
+      <td>{{i.nome}}     {{i.cognome}}</td>
+      <td>{{i.ruolo}}</td>
+    </tr>
 
-  <div *ngFor="let calc of calciatori | async">
-    {{calc.cognonome }}
-    {{ calc.nome}}
-
-  </div>
-
+    </tbody>
+  </table>
 </div>
+
 
