@@ -1,0 +1,26 @@
+.nav{
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+.fileter{
+  background-color: black;
+  height: 50px;
+
+}
+
+.buttn{
+  background-color:black;
+  color: white;
+  border: none;
+  margin-top: 3%;
+}
+
+.player{
+  margin-top: 5%;
+}
+
+
+dropdown-menu {
+  z-index: 10000;
+}

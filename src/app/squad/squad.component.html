@@ -1,22 +1,148 @@
-<div class="container col-8">
-  <table class="table" style="color: black; margin-top: 12%">
-    <thead>
-    <tr>
-      <th>Nome</th>
-      <th>Ruolo</th>
-      <th></th>
+<nav class="navbar navbar-expand-lg  mynav nav">
+  <div>
+    <a class="navbar-brand " href=""><img src="assets/images/logo staranzano.png" width="60px" height="60px"></a>
+  </div>
+
+  <div class="navbar-toggler btn-group " type="button" dropdown data-toggle="collapse" data-target="#navbarNavDropdown; #social" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <button  dropdownToggle type="button"  class="btn  " style="background: none; border: none; border-radius: 0px; float: right" >
+      <i class="fa fa-list-ul fa-2x social"></i>
+    </button>
+    <ul  *dropdownMenu class="dropdown-menu"
+         role="menu" aria-labelledby="button-basic">
+      <li role="menuitem"><a class="dropdown-item" href="#">Home</a></li>
+      <li class="divider dropdown-divider"></li>
+      <li role="menuitem"><a class="dropdown-item" href="#">Le Squadre</a></li>
+      <li class="divider dropdown-divider"></li>
+      <li role="menuitem"><a class="dropdown-item" href="#">Staff</a></li>
+      <li class="divider dropdown-divider"></li>
+      <li role="menuitem"><a class="dropdown-item" href="#">La Storia</a>
+      <li class="divider dropdown-divider"></li>
+      <li role="menuitem"><a class="dropdown-item" href="#">Contattaci</a>
+      <li class="divider dropdown-divider"></li>
+      <li role="menuitem">
+        <a  href="https://www.facebook.com/asdterenzianastaranzano/">
+          <i class=" fa fa-facebook-square fa-2x  col-1 socialnav"></i></a>
+        <a  href="https://www.youtube.com/watch?v=z2OiHFTyqvg">
+          <i class=" fa fa-youtube fa-2x col-1 offset-1 socialnav"></i></a>
+        <a href="https://www.facebook.com/asdterenzianastaranzano/">
+          <i class=" fa fa-instagram fa-2x  col-1 offset-1 socialnav"></i></a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="collapse navbar-collapse col-lg-8 " id="navbarNavDropdown">
+    <ul class="navbar-nav navbar-left" style="float: left">
 
 
-    </tr>
-    </thead>
-    <tbody *ngFor="let i of items">
-    <tr>
-      <td>{{i.nome}}     {{i.cognome}}</td>
-      <td>{{i.ruolo}}</td>
-    </tr>
+      <li class="nav-item active col-lg-2">
+        <a class="nav-link font" href="">HOME </a>
+      </li>
 
-    </tbody>
-  </table>
+
+      <li class="nav-item col-lg-2">
+        <a class="nav-link font" href="Squad">STORIA</a>
+      </li>
+
+
+      <li class="nav-item col-lg-2">
+        <div class="btn-group" dropdown>
+          <button id="btn-staff" dropdownToggle type="button"  class="btn  dropdown-toggle font squadre"
+                  aria-controls="dropdown-basic" style="background: none; border: none; border-radius: 0px">
+            STAFF <span class="caret"></span>
+          </button>
+          <ul id="dropdown-staff" *dropdownMenu class="dropdown-menu"
+              role="menu" aria-labelledby="button-basic">
+            <li role="menuitem"><a class="dropdown-item" href="Squad">STAFF Tecnico</a></li>
+            <li class="divider dropdown-divider"></li>
+            <li role="menuitem"><a class="dropdown-item" href="#">STAFF Societario</a></li>
+          </ul>
+        </div>
+      </li>
+
+
+      <li class="nav-item col-lg-3 ">
+        <div class="btn-group" dropdown>
+          <button id="button-basic" dropdownToggle type="button"  class="btn  dropdown-toggle font squadre"
+                  aria-controls="dropdown-basic" style="background: none; border: none; border-radius: 0px">
+            SQUADRE <span class="caret"></span>
+          </button>
+          <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu"
+              role="menu" aria-labelledby="button-basic">
+
+            <li role="menuitem" dropdown triggers="mouseover" placement="right" container="body">
+              <a dropdownToggle class="dropdown-item dropdown-toggle"
+                 (click)="true">Prima Squadra <span class="caret"></span></a>
+              <ul *dropdownMenu class="dropdown-menu" role="menu">
+                <li role="menuitem"><a class="dropdown-item" href="Squad">Rosa</a></li>
+                <li class="divider dropdown-divider"></li>
+                <li role="menuitem"><a class="dropdown-item" href="#/dropdowns#nested">Prossime Partite</a></li>
+              </ul>
+            </li>
+            <li class="divider dropdown-divider"></li>
+            <li role="menuitem"><a class="dropdown-item" href="#">Juniores</a></li>
+            <li class="divider dropdown-divider"></li>
+            <li role="menuitem"><a class="dropdown-item" href="#">Giovanissimi</a></li>
+            <li class="divider dropdown-divider"></li>
+            <li role="menuitem"><a class="dropdown-item" href="#">Pulcini</a>
+            <li class="divider dropdown-divider"></li>
+            <li role="menuitem"><a class="dropdown-item" href="#">Primi Calci</a></li>
+          </ul>
+        </div>
+      </li>
+
+
+      <li class="nav-item col-lg-2">
+        <a class="nav-link font" href="Contact">CONTATTACI</a>
+      </li>
+    </ul>
+
+
+  </div >
+  <div id="social" class="collapse navbar-collapse offset-1 col-lg-2">
+    <ul class="nav navbar-right " style="float: right">
+      <div class="offset-1">
+        <li><a href="https://www.facebook.com/asdterenzianastaranzano/"> <i class=" fa fa-facebook-square fa-2x social"></i></a></li>
+      </div>
+      <div class="offset-1">
+        <li><a href="https://www.youtube.com/watch?v=z2OiHFTyqvg"> <i class="fa fa-youtube fa-2x social"></i> </a></li>
+      </div>
+      <div class="col-lg-1">
+        <li><a href="#"><i class="  fa fa-instagram fa-2x social"></i> </a></li>
+      </div>
+
+    </ul>
+  </div>
+</nav>
+
+<div class="container-fluid">
+
+  <div class="row fileter" >
+          <div class="col-1"> </div>
+          <div class="col-2"> <button class="btn btn-warning buttn" (click)="getAll()">ALL</button></div>
+          <div class="col-2"> <button class="btn btn-warning buttn" (click)="getFoward()">ATTACANTI</button></div>
+          <div class="col-2"> <button class="btn btn-warning buttn" (click)="getMidfielder()">CENTROCAMPISTI</button></div>
+          <div class="col-2"> <button class="btn btn-warning buttn" (click)="getDefender()">DIFENSORI</button></div>
+          <div class="col-2"> <button class="btn btn-warning buttn" (click)="getGoalKeeper()">PORTIERI</button></div>
+
+    </div>
+  <div>
+    <div>
+      <div class="row">
+        <div class="col-6" *ngFor="let i of items">
+          <div class="row player">
+          <div class="col-6" >
+            <img src="../../assets/images/logo staranzano.png" style="width: 50%">
+          </div>
+          <div class="col-6" >
+            <div>{{i.nome}} {{i.cognome}}</div>
+            <div>{{i.ruolo}}</div>
+            <div>{{i.Abb}}</div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>
-
 

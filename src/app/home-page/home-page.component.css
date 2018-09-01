@@ -1,0 +1,249 @@
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+  width: 100%;
+
+}
+.titleOnImage {
+  font-size: 3vw;
+  font-family: 'American Typewriter';
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+/* Centered text */
+.risultatoLogoD {
+
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+}
+
+.risultatoLogoS {
+
+  position: absolute;
+  top: 50%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+}
+
+.risultatoS {
+  color: white;
+  font-size: 9vw;
+  font-family: Bookman;
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+}
+
+.risultatoD {
+  color: white;
+  font-family: Bookman;
+  font-size: 9vw;
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+}
+
+.risultatoBarra {
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 10vw;
+  transform: translate(-50%, -50%);
+}
+
+
+.wrapper{
+  display: flex;
+  justify-content: center;
+
+}
+
+.wrapper1{
+  margin-top: 5%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F7F7F7;
+  border-bottom: solid 2px #EFEFEF;
+  border-top: solid 2px #EFEFEF;
+  font-family: Impact, fantasy;
+}
+
+.centered6 {
+
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.centered8 {
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+}
+
+.centered9 {
+
+  position: absolute;
+  top: 30%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+}
+
+.thumbnail{
+  border: solid 1px black;
+  text-align: center;
+
+}
+
+.riga{
+  background-color: #d9534f;
+  height: 40px;
+  width: 100%;
+}
+
+.titolo1{
+  font: bold 70px "Century Schoolbook", sans-serif, Times, serif;
+  color: white;
+  line-height: 90%;
+  margin: .2em 0 .4em 0;
+  letter-spacing: 2px;xe: 40px;
+  text-shadow: 2px 0 0 black, -2px 0 0 black, 0 2px 0 black, 0 -2px 0 black, 1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
+}
+
+.titolo2{
+  font: bold 70px "Century Schoolbook", sans-serif, Times, serif;
+  color: #d9534f;
+  line-height: 90%;
+  margin: .2em 0 .4em 0;
+  letter-spacing: 2px;xe: 40px;
+}
+
+.newsC{
+  color: white;
+  font-family: Bookman;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.newsS{
+  color: white;
+  font-family: Bookman;
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+}
+.newsD{
+  color: white;
+  font-family: Bookman;
+  position: absolute;
+  top: 50%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+}
+
+.thumbnail{
+  background: rgba(64,64,64,0.8);
+  height: 40vw;
+}
+
+.title{
+  font-size: 10vw;
+  font-family: 'American Typewriter';
+  margin-top: 20%
+}
+
+.newsParagraph{
+  font-size: 1.5vw;
+  padding: 5%
+}
+
+.newsTitle{
+  font-size: 2vw;
+}
+
+
+@media screen and (max-width: 1000px) {
+  #title_message {
+    visibility: hidden;
+    clear: both;
+    float: left;
+    margin: 10px auto 5px 20px;
+    width: 28%;
+    display: block;
+  }
+
+
+
+}
+
+
+@media screen and (min-width: 999px) {
+  #title_message_phone {
+    visibility: visible;
+    display: block;
+    color: black;
+  }
+}
+
+
+@media all and (min-width: 1000px) {
+  .deskContent {
+    visibility: visible;
+    clear: both;
+    float: left;
+    margin: 10px auto 5px 20px;
+    width: 28%;
+    display: block;
+  }
+  .phoneContent {
+    visibility: hidden;
+    clear: both;
+    float: left;
+    margin: 10px auto 5px 20px;
+    width: 28%;
+    display: none;
+  }
+}
+
+@media all and (max-width: 999px) {
+  .deskContent {
+    visibility: hidden;
+    clear: both;
+    float: left;
+    margin: 10px auto 5px 20px;
+    width: 28%;
+    display: none;
+  }
+  .phoneContent {
+    visibility: visible;
+    color: black;
+    clear: both;
+    float: left;
+    margin: 10px auto 5px 20px;
+    width: 28%;
+    display: block;
+  }
+}
+
+
+
+

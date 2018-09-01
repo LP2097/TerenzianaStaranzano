@@ -1,58 +1,84 @@
-
-<!--NAV BAR DA COPIARE SU TUTTE LE PAGINE -->
-<nav class="navbar navbar-expand-lg  mynav">
+<nav class="navbar navbar-expand-lg  mynav nav">
   <div>
-  <a class="navbar-brand " href=""><img src="assets/images/logo staranzano.png" width="60px" height="60px"></a>
+    <a class="navbar-brand " href=""><img src="assets/images/logo staranzano.png" width="60px" height="60px"></a>
   </div>
 
-    <div class="navbar-toggler btn-group " type="button" dropdown data-toggle="collapse" data-target="#navbarNavDropdown; #social" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <button  dropdownToggle type="button"  class="btn  " style="background: none; border: none; border-radius: 0px; float: right" >
-        <i class="fa fa-list-ul fa-2x social"></i>
-      </button>
-      <ul  *dropdownMenu class="dropdown-menu"
-          role="menu" aria-labelledby="button-basic">
-        <li role="menuitem"><a class="dropdown-item" href="#">Home</a></li>
-        <li class="divider dropdown-divider"></li>
-        <li role="menuitem"><a class="dropdown-item" href="#">Le Squadre</a></li>
-        <li class="divider dropdown-divider"></li>
-        <li role="menuitem"><a class="dropdown-item" href="#">Staff</a></li>
-        <li class="divider dropdown-divider"></li>
-        <li role="menuitem"><a class="dropdown-item" href="#">La Storia</a>
-        <li class="divider dropdown-divider"></li>
-        <li role="menuitem"><a class="dropdown-item" href="#">Contattaci</a>
-        <li class="divider dropdown-divider"></li>
-        <li role="menuitem">
-           <a  href="https://www.facebook.com/asdterenzianastaranzano/">
-            <i class=" fa fa-facebook-square fa-2x  col-1 socialnav"></i></a>
-          <a  href="https://www.youtube.com/watch?v=z2OiHFTyqvg">
-            <i class=" fa fa-youtube fa-2x col-1 offset-1 socialnav"></i></a>
-          <a href="https://www.facebook.com/asdterenzianastaranzano/">
-            <i class=" fa fa-instagram fa-2x  col-1 offset-1 socialnav"></i></a>
+  <div class="navbar-toggler btn-group " type="button" dropdown data-toggle="collapse" data-target="#navbarNavDropdown; #social" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <button  dropdownToggle type="button"  class="btn  " style="background: none; border: none; border-radius: 0px; float: right" >
+      <i class="fa fa-list-ul fa-2x social"></i>
+    </button>
+    <ul  *dropdownMenu class="dropdown-menu"
+         role="menu" aria-labelledby="button-basic">
+      <li role="menuitem"><a class="dropdown-item" href="#">Home</a></li>
+      <li class="divider dropdown-divider"></li>
+      <li role="menuitem"><a class="dropdown-item" href="#">Le Squadre</a></li>
+      <li class="divider dropdown-divider"></li>
+      <li role="menuitem"><a class="dropdown-item" href="#">Staff</a></li>
+      <li class="divider dropdown-divider"></li>
+      <li role="menuitem"><a class="dropdown-item" href="#">La Storia</a>
+      <li class="divider dropdown-divider"></li>
+      <li role="menuitem"><a class="dropdown-item" href="#">Contattaci</a>
+      <li class="divider dropdown-divider"></li>
+      <li role="menuitem">
+        <a  href="https://www.facebook.com/asdterenzianastaranzano/">
+          <i class=" fa fa-facebook-square fa-2x  col-1 socialnav"></i></a>
+        <a  href="https://www.youtube.com/watch?v=z2OiHFTyqvg">
+          <i class=" fa fa-youtube fa-2x col-1 offset-1 socialnav"></i></a>
+        <a href="https://www.facebook.com/asdterenzianastaranzano/">
+          <i class=" fa fa-instagram fa-2x  col-1 offset-1 socialnav"></i></a>
       </li>
-      </ul>
-    </div>
+    </ul>
+  </div>
 
   <div class="collapse navbar-collapse col-lg-8 " id="navbarNavDropdown">
     <ul class="navbar-nav navbar-left" style="float: left">
+
+
       <li class="nav-item active col-lg-2">
         <a class="nav-link font" href="">HOME </a>
       </li>
+
+
       <li class="nav-item col-lg-2">
-        <a class="nav-link font" href="History">STORIA</a>
+        <a class="nav-link font" href="Squad">STORIA</a>
       </li>
+
+
       <li class="nav-item col-lg-2">
-        <a class="nav-link font" href="Staff">STAFF</a>
+        <div class="btn-group" dropdown>
+          <button id="btn-staff" dropdownToggle type="button"  class="btn  dropdown-toggle font squadre"
+                  aria-controls="dropdown-basic" style="background: none; border: none; border-radius: 0px">
+            STAFF <span class="caret"></span>
+          </button>
+          <ul id="dropdown-staff" *dropdownMenu class="dropdown-menu"
+              role="menu" aria-labelledby="button-basic">
+            <li role="menuitem"><a class="dropdown-item" href="Squad">STAFF Tecnico</a></li>
+            <li class="divider dropdown-divider"></li>
+            <li role="menuitem"><a class="dropdown-item" href="#">STAFF Societario</a></li>
+          </ul>
+        </div>
       </li>
+
+
       <li class="nav-item col-lg-3 ">
         <div class="btn-group" dropdown>
           <button id="button-basic" dropdownToggle type="button"  class="btn  dropdown-toggle font squadre"
                   aria-controls="dropdown-basic" style="background: none; border: none; border-radius: 0px">
             SQUADRE <span class="caret"></span>
           </button>
-
           <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu"
               role="menu" aria-labelledby="button-basic">
-            <li role="menuitem"><a class="dropdown-item" href="Squad">1° Sqaudra</a></li>
+
+            <li role="menuitem" dropdown triggers="mouseover" placement="right" container="body">
+              <!--TODO AGGIUNGERE in caso di premuta di solo bottone prima sqadra rinvio alle prossime partite-->
+              <a dropdownToggle class="dropdown-item dropdown-toggle"
+                 (click)="true" href="">Prima Squadra <span class="caret"></span></a>
+              <ul *dropdownMenu class="dropdown-menu" role="menu">
+                <li role="menuitem"><a class="dropdown-item" href="Squad">Rosa</a></li>
+                <li class="divider dropdown-divider"></li>
+                <li role="menuitem"><a class="dropdown-item" href="#/dropdowns#nested">Prossime Partite</a></li>
+              </ul>
+            </li>
             <li class="divider dropdown-divider"></li>
             <li role="menuitem"><a class="dropdown-item" href="#">Juniores</a></li>
             <li class="divider dropdown-divider"></li>
@@ -60,11 +86,12 @@
             <li class="divider dropdown-divider"></li>
             <li role="menuitem"><a class="dropdown-item" href="#">Pulcini</a>
             <li class="divider dropdown-divider"></li>
-            <li role="menuitem"><a class="dropdown-item" href="#">Primi Calci</a>
-            </li>
+            <li role="menuitem"><a class="dropdown-item" href="#">Primi Calci</a></li>
           </ul>
         </div>
       </li>
+
+
       <li class="nav-item col-lg-2">
         <a class="nav-link font" href="Contact">CONTATTACI</a>
       </li>
@@ -87,8 +114,6 @@
     </ul>
   </div>
 </nav>
-
-
 
 
 <!-- SLIDE IMMAGINI PRINCIPALE -->

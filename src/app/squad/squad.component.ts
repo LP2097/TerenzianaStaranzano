@@ -12,16 +12,21 @@ import * as _ from 'underscore';
 export class SquadComponent  {
 
   items;
-  ordinata;
-  profileUrl;
-  i;
 
+  all;
   constructor(public db: AngularFireDatabase, private storage: AngularFireStorage) {
 
 
-    db.list('PrimaSquadra/Calciatori').valueChanges().subscribe(items => {
+    this.getList();
+
+  }
+
+
+  getList(){
+
+    this.db.list('PrimaSquadra/Calciatori').valueChanges().subscribe(items => {
       this.items = items;
-      this.getList()
+      this.all = items;
       JSON.stringify(this.items);
       console.log(this.items);
 
@@ -29,12 +34,34 @@ export class SquadComponent  {
 
   }
 
-
-  getList(){
-    let list =_.groupBy(this.items,'ruolo' );
-    console.log("la lista ordinata"+list)
-    this.ordinata=list;
+  getAll(){
+    this.items= this.all
   }
 
+  getFoward(){
+    let list =_.groupBy(this.all,function (item) {
+      return item.ruolo
+    } );
+    this.items=list.Attaccante
+  }
+
+  getMidfielder(){
+    let list =_.groupBy(this.all,function (item) {
+      return item.ruolo
+    } );
+    this.items=list.Centrocampista
+  }
+  getDefender(){
+    let list =_.groupBy(this.all,function (item) {
+      return item.ruolo
+    } );
+    this.items=list.Difensore
+  }
+  getGoalKeeper(){
+   let list =_.groupBy(this.all,function (item) {
+      return item.ruolo
+    } );
+    this.items=list.Portiere
+  }
 
 }
