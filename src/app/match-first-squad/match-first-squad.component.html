@@ -39,10 +39,6 @@
       </li>
 
 
-      <li class="nav-item col-lg-2">
-        <a class="nav-link font" href="Squad">STORIA</a>
-      </li>
-
 
       <li class="nav-item col-lg-2">
         <div class="btn-group" dropdown>
@@ -60,7 +56,7 @@
       </li>
 
 
-      <li class="nav-item col-lg-3 ">
+      <li class="nav-item col-lg-2 ">
         <div class="btn-group" dropdown>
           <button id="button-basic" dropdownToggle type="button"  class="btn  dropdown-toggle font squadre"
                   aria-controls="dropdown-basic" style="background: none; border: none; border-radius: 0px">
@@ -70,13 +66,12 @@
               role="menu" aria-labelledby="button-basic">
 
             <li role="menuitem" dropdown triggers="mouseover" placement="right" container="body">
-              <!--TODO AGGIUNGERE in caso di premuta di solo bottone prima sqadra rinvio alle prossime partite-->
               <a dropdownToggle class="dropdown-item dropdown-toggle"
-                 (click)="true" href="">Prima Squadra <span class="caret"></span></a>
+                 (click)="true">Prima Squadra <span class="caret"></span></a>
               <ul *dropdownMenu class="dropdown-menu" role="menu">
                 <li role="menuitem"><a class="dropdown-item" href="Squad">Rosa</a></li>
                 <li class="divider dropdown-divider"></li>
-                <li role="menuitem"><a class="dropdown-item" href="#/dropdowns#nested">Prossime Partite</a></li>
+                <li role="menuitem"><a class="dropdown-item" href="Fi">Prossime Partite</a></li>
               </ul>
             </li>
             <li class="divider dropdown-divider"></li>
@@ -91,10 +86,29 @@
         </div>
       </li>
 
+      <li class="nav-item col-lg-3">
+        <div class="btn-group" dropdown>
+          <button id="btn-other" dropdownToggle type="button"  class="btn  dropdown-toggle font squadre"
+                  aria-controls="dropdown-basic" style="background: none; border: none;margin-left: 30%; border-radius: 0px">
+            ALTRO <span class="caret"></span>
+          </button>
+          <ul id="dropdown-other" *dropdownMenu class="dropdown-menu"
+              role="menu" aria-labelledby="button-basic" style="margin-left: 30%">
+            <li role="menuitem"><a class="dropdown-item" href="Squad">NEWS</a></li>
+            <li class="divider dropdown-divider"></li>
+            <li role="menuitem"><a class="dropdown-item" href="#">STORIA</a></li>
+            <li class="divider dropdown-divider"></li>
+            <li role="menuitem"><a class="dropdown-item" href="#">GALLERY</a></li>
+          </ul>
+        </div>
+      </li>
 
-      <li class="nav-item col-lg-2">
+      <li class="nav-item col-lg-1">
         <a class="nav-link font" href="Contact">CONTATTACI</a>
       </li>
+
+
+
     </ul>
 
 
@@ -115,71 +129,5 @@
   </div>
 </nav>
 
-<div class="container-fluid">
 
-
-  <div class="container col-lg-12 orari">
-    <div class="row" >
-      <div class="col-lg-5">
-
-      </div>
-      <div class="col-lg-2" ></div>
-      <div class="col-lg-5 ">
-        <h2 style="float: left">ORARI SEGRETERIA</h2>
-
-        <table class="table" style="color: black; margin-top: 12%">
-          <thead>
-          <tr>
-            <th>Giornate di apertura</th>
-            <th>Orario</th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr>
-            <td>Lunedi</td>
-            <td>17:30-19:00</td>
-          </tr>
-          <tr>
-            <td>Mercoledi</td>
-            <td>17:30-19:00</td>
-          </tr>
-          <tr>
-            <td>Venerdi</td>
-            <td>17:30-18:30</td>
-          </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
-
-<div  style="margin-top: 10%">
-  <h2>CONTATTI<i class="fa fa-comments-o" aria-hidden="true"></i></h2>
-</div>
-<div class="col-lg-12" style="margin-top: 5%">
-  <div class="row">
-    <div class="col-3">
-      <h4> Recapiti Telefonici: </h4>
-    </div>
-    <div class="col-4">
-    <h4><i class="fa fa-phone" style="margin-right: 2%"></i>  0481 23492</h4>
-    </div>
-    <div class="col-4">
-      <h4><i class="fa fa-mobile" style="margin-right: 2%"></i>  +39 456798</h4>
-    </div>
-
-  </div>
-  <div class="row" style="margin-top: 2%">
-    <div class="col-3">
-      <h4> Indirizzo Email: </h4>
-    </div>
-    <div class="col-6">
-      <h4><i class="fa fa-envelope" style="margin-right: 2%"></i>terenzaina.staranzano@gmail.com </h4>
-    </div>
-  </div>
-</div>
-
-<div class="google-maps">
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2742.851831274907!2d13.488835485442532!3d45.80844290791294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477ba73ee15b896d%3A0x18e5c730ad0f3390!2sCampo+sportivo+Fogar!5e0!3m2!1sit!2sit!4v1535285368001" width="100%" height="600px" frameborder="0" style="border:0" allowfullscreen></iframe>
-</div>
-</div>
+{{match}}

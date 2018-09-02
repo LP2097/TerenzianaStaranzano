@@ -20,6 +20,7 @@ import {AngularFireDatabaseModule} from 'angularfire2/database';
 import {environment} from '../environments/environment';
 import {AngularFirestore} from 'angularfire2/firestore';
 import {AngularFireStorageModule} from 'angularfire2/storage';
+import { MatchFirstSquadComponent } from './match-first-squad/match-first-squad.component';
 
 
 
@@ -31,7 +32,8 @@ import {AngularFireStorageModule} from 'angularfire2/storage';
     SquadComponent,
     HistoryComponent,
     StaffComponent,
-    ContactComponent
+    ContactComponent,
+    MatchFirstSquadComponent
   ],
   imports: [
     BrowserModule,
@@ -46,10 +48,11 @@ import {AngularFireStorageModule} from 'angularfire2/storage';
     }),
     RouterModule.forRoot([
       { path: '', component: HomePageComponent, pathMatch: 'full' },
-      { path: 'Squad', component: SquadComponent },
+      { path: 'FirstSquad', component: SquadComponent },
       { path: 'History', component: HistoryComponent },
       { path: 'Staff', component: StaffComponent },
       { path: 'Contact', component: ContactComponent },
+      { path: 'FirstSquadMatch', component: MatchFirstSquadComponent },
 
     ]/*, { useHash : true}*/)
   ],
