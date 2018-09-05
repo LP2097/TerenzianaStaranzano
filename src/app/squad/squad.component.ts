@@ -16,6 +16,8 @@ export class SquadComponent  {
   all;
   constructor(public db: AngularFireDatabase, private storage: AngularFireStorage) {
 
+    const promises = [];
+
 
     this.getList();
 
@@ -63,5 +65,8 @@ export class SquadComponent  {
     } );
     this.items=list.Portiere
   }
+
+
+
 
 }

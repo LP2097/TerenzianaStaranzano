@@ -23,8 +23,6 @@ import {AngularFireStorageModule} from 'angularfire2/storage';
 import { MatchFirstSquadComponent } from './match-first-squad/match-first-squad.component';
 
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +31,9 @@ import { MatchFirstSquadComponent } from './match-first-squad/match-first-squad.
     HistoryComponent,
     StaffComponent,
     ContactComponent,
-    MatchFirstSquadComponent
+    MatchFirstSquadComponent,
+
+
   ],
   imports: [
     BrowserModule,

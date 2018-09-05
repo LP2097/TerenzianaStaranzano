@@ -1,3 +1,4 @@
+<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 <nav class="navbar navbar-expand-lg  mynav nav">
   <div>
     <a class="navbar-brand " href=""><img src="assets/images/logo staranzano.png" width="60px" height="60px"></a>
@@ -129,5 +130,89 @@
   </div>
 </nav>
 
+<div class="  background col-lg-12">
 
-{{match}}
+
+  <div class="row">
+    <div class="col-lg-2"></div>
+    <div class="col-lg-8 nextMatchTitle"  style="text-align: center">
+     PROSSIMO MATCH
+    </div>
+    <div class="col-lg-2"></div>
+  </div>
+    <div class="row">
+      <div class="col-lg-2"></div>
+      <div class="col-lg-8 nextMatch"  style="text-align: center">
+        <div >{{nextMatch.Data | date:'yyyy/MM/dd HH:mm:ss' }} </div>
+        <div *ngIf="nextMatch.Luogo != 'Casa' ">{{nextMatch.Sq_Avversaria}} - STARANZANO</div>
+        <div *ngIf="nextMatch.Luogo != 'Fuori Casa'">STARANZANO - {{nextMatch.Sq_Avversaria}}</div>
+      </div>
+      <div class="col-lg-2"></div>
+    </div>
+    <div class="body" *ngIf="nextMatch" >
+      <div *ngIf="nextMatch.Data" class="clock-container">
+        <div class="clock-col">
+          <p class="clock-day clock-timer">
+            {{days}}
+          </p>
+          <p class="clock-label">
+            Day
+          </p>
+        </div>
+        <div class="clock-col">
+          <p class="clock-hours clock-timer">
+            {{hours}}
+          </p>
+          <p class="clock-label">
+            Hours
+          </p>
+        </div>
+        <div class="clock-col">
+          <p class="clock-minutes clock-timer ">
+            {{minutes}}
+          </p>
+          <p class="clock-label">
+            Minutes
+          </p>
+        </div>
+        <div class="clock-col">
+          <p class="clock-seconds clock-timer">
+            {{seconds}}
+          </p>
+          <p class="clock-label">
+           Seconds
+          </p>
+        </div>
+      </div>
+    </div>
+
+</div>
+
+
+
+  <div class="row">
+  <div class="col-lg-3"></div>
+  <div class="col-lg-6 ">
+    <table class="table table-striped  table-hover table-bordered " style="color: black">
+      <thead>
+      <tr style="background: #d9534f; color: white">
+
+        <th scope="col">Data  <i class="fa fa-calendar" aria-hidden="true"></i></th>
+        <th scope="col">Incontro  <i class="fa fa-futbol-o" aria-hidden="true"></i></th>
+
+
+      </tr>
+      </thead>
+      <tbody *ngFor="let m of match">
+      <tr class="table-light">
+        <td style="text-align: center">{{m.Data | date: "dd/MM/yyyy"}}</td>
+        <td *ngIf="m.Luogo != 'Casa' ">{{m.Sq_Avversaria}} - STARANZANO</td>
+        <td *ngIf="m.Luogo != 'Fuori Casa'">STARANZANO - {{m.Sq_Avversaria}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  </div>
+
+
+
