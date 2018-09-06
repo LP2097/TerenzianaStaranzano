@@ -24,7 +24,7 @@
 .font{
   color: white;
   font-size: larger;
-  font-family: "American Typewriter";
+  font-family: "Montserrat", "sans-serif";
 }
 
 .social{
@@ -35,4 +35,7 @@
   color: black;
 }
 
+.dropdown-menu{
+  font-family: "Montserrat", "sans-serif";
+}
 

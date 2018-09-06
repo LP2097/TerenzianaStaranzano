@@ -1,9 +1,10 @@
 import {AngularFireDatabase} from 'angularfire2/database';
 import * as _ from 'underscore';
 import * as moment from 'moment';
-import {Component, ElementRef, OnInit} from '@angular/core';
+import {Component, ElementRef, Inject, OnInit} from '@angular/core';
 import {Match} from '../Models/MarchModel';
 import {Observable, Subscription} from 'rxjs/Rx';
+import {AosToken} from '../aos';
 
 @Component({
   selector: 'app-match-first-squad',
@@ -33,8 +34,13 @@ export class MatchFirstSquadComponent implements OnInit {
   minutes;
   seconds;
 
-  constructor(private db: AngularFireDatabase,private elm: ElementRef) {
+  constructor(@Inject(AosToken) aos, private db: AngularFireDatabase,private elm: ElementRef) {
     this.getList();
+    aos.init();
+    window.addEventListener('load', function() {
+      aos.refresh();
+
+    });
   }
   ngOnInit() {
   }

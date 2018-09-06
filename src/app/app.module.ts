@@ -21,6 +21,7 @@ import {environment} from '../environments/environment';
 import {AngularFirestore} from 'angularfire2/firestore';
 import {AngularFireStorageModule} from 'angularfire2/storage';
 import { MatchFirstSquadComponent } from './match-first-squad/match-first-squad.component';
+import { GalleryComponent } from './gallery/gallery.component';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { MatchFirstSquadComponent } from './match-first-squad/match-first-squad.
     StaffComponent,
     ContactComponent,
     MatchFirstSquadComponent,
+    GalleryComponent,
 
 
   ],
@@ -53,6 +55,7 @@ import { MatchFirstSquadComponent } from './match-first-squad/match-first-squad.
       { path: 'Staff', component: StaffComponent },
       { path: 'Contact', component: ContactComponent },
       { path: 'FirstSquadMatch', component: MatchFirstSquadComponent },
+      { path: 'Gallery', component: GalleryComponent },
 
     ]/*, { useHash : true}*/)
   ],
