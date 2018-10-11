@@ -15,6 +15,11 @@ import {AosToken} from '../aos';
 
 export class MatchFirstSquadComponent implements OnInit {
 
+
+  public term: string = null;
+
+  p: number = 1;
+
   match;
   all;
   config;

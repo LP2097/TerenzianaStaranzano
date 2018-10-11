@@ -3,6 +3,7 @@ import {Observable} from 'rxjs/Observable';
 import {AngularFireDatabase} from 'angularfire2/database';
 import {AngularFireStorage} from 'angularfire2/storage';
 import * as _ from 'underscore';
+import * as firebase from 'firebase';
 
 @Component({
   selector: 'app-squad',
@@ -12,14 +13,15 @@ import * as _ from 'underscore';
 export class SquadComponent  {
 
   items;
-
+  image;
   all;
+  imageArray=[]
+
   constructor(public db: AngularFireDatabase, private storage: AngularFireStorage) {
 
     const promises = [];
-
-
     this.getList();
+
 
   }
 
@@ -31,6 +33,7 @@ export class SquadComponent  {
       this.all = items;
       JSON.stringify(this.items);
       console.log(this.items);
+      this.getImage();
 
     });
 
@@ -66,6 +69,20 @@ export class SquadComponent  {
     this.items=list.Portiere
   }
 
+
+
+
+  getImage(){
+
+    var storageRef = firebase.storage().ref();
+    // Create a reference to the file we want to download
+    for(let i =0 ; i < this.all.length; i++) {
+      var starsRef = storageRef.child('FotoPrimaSquadra/'+i+'.jpg');
+      // Get the download URL
+      starsRef.getDownloadURL().then(url => this.imageArray[i] = url);
+      console.log(JSON.stringify(this.imageArray[i]))
+    }
+  }
 
 
 

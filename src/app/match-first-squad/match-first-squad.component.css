@@ -40,7 +40,7 @@
   width: 100%;
   background: linear-gradient(45deg, #1870ed 0, #f18f88 100%);
   font-family: "Montserrat", "sans-serif";
-  min-height:900px;
+  min-height:1200px;
 }
 
 .body {
@@ -157,3 +157,25 @@ em::after {
   display: block;
 }
 
+.box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.inner-addon {
+  position: relative;
+}
+
+/* style icon */
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+
+/* align icon */
+.left-addon .glyphicon {
+  left: 0px;
+}

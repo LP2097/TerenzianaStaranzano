@@ -22,6 +22,13 @@ import {AngularFirestore} from 'angularfire2/firestore';
 import {AngularFireStorageModule} from 'angularfire2/storage';
 import { MatchFirstSquadComponent } from './match-first-squad/match-first-squad.component';
 import { GalleryComponent } from './gallery/gallery.component';
+import { LocationStrategy, HashLocationStrategy} from '@angular/common';
+import {NgxPaginationModule} from 'ngx-pagination';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { FormsModule } from '@angular/forms';
+import { NewsComponent } from './news/news.component';
+
+
 
 
 @NgModule({
@@ -34,14 +41,18 @@ import { GalleryComponent } from './gallery/gallery.component';
     ContactComponent,
     MatchFirstSquadComponent,
     GalleryComponent,
+    NewsComponent,
 
 
   ],
   imports: [
     BrowserModule,
     NgxGalleryModule,
+    Ng2SearchPipeModule,
+    NgxPaginationModule,
     CarouselModule.forRoot(),
     BsDropdownModule.forRoot(),
+    FormsModule,
     AngularFireStorageModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
@@ -56,6 +67,7 @@ import { GalleryComponent } from './gallery/gallery.component';
       { path: 'Contact', component: ContactComponent },
       { path: 'FirstSquadMatch', component: MatchFirstSquadComponent },
       { path: 'Gallery', component: GalleryComponent },
+      { path: 'News', component:NewsComponent}
 
     ]/*, { useHash : true}*/)
   ],
